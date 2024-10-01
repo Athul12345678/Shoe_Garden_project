@@ -1,0 +1,65 @@
+.payment-failed-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .failed-animation {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .crossmark {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #ff6245;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #ff6245;
+    animation: fillred .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+  }
+  
+  .crossmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #ff6245;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  }
+  
+  .crossmark__path {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+  }
+  
+  @keyframes fillred {
+    100% {
+      box-shadow: inset 0px 0px 0px 30px #ff6245;
+    }
+  }
+  
+  .try-again-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff6245;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .try-again-btn:hover {
+    background-color: #e55a3f;
+  }
